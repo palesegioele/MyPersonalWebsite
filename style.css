@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --l: 4rem;
+} 
+
+body {
+  font-family: 'Poppins', sans-serif;
+  min-height: 90vh;
+  background: linear-gradient(to right, #ff84db, #64d9f3, #f6fd62);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, calc(1/7));
+  width: 22rem;
+  height: 34rem;
+  border-radius: 1rem;
+  position: relative;
+  padding-top: 1rem;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  background-color: rgba(0, 0, 0, calc(1/14));
+  inset: 0;
+  transform: rotate(-5deg);
+  border-radius: 1rem;
+  z-index: -1;
+}
+
+.logo {
+  margin-top: var(--l);
+  margin-bottom: var(--l);
+  text-align: center;
+}
+
+.logo img {
+  width: 10rem;
+  border-radius: 1rem;
+  transition: 
+    transform .15s,
+    box-shadow .15s;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .5);
+}
+
+.username {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--l);
+}
+
+.username table {
+  border-collapse: collapse;
+}
+
+.username th:hover {
+  cursor: default;
+  transform: scale(1.2);
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, .5);
+}
+
+.media {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--l);
+}
+
+.discord,
+.steam,
+.instagram,
+.spotify {
+  display: inline;
+}
+
+svg {
+  color: black;
+  cursor: pointer;
+  margin-left: 13px;
+  margin-right: 13px;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 3px;
+  transition:
+    transform .15s,
+    box-shadow .15s;
+}
+
+svg:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+}
+
+svg:active {
+  transform: scale(1);
+  box-shadow: none;
+}
